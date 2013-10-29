@@ -193,6 +193,8 @@ public class FileManager {
 			
 		}else if(old_file.isDirectory() && temp_dir.isDirectory() && temp_dir.canWrite()) {
 			String files[] = old_file.list();
+			if(files == null) return -1;
+			
 			String dir = newDir + old.substring(old.lastIndexOf("/"), old.length());
 			int len = files.length;
 			
@@ -293,6 +295,8 @@ public class FileManager {
 	public void createZipFile(String path) {
 		File dir = new File(path);
 		String[] list = dir.list();
+		if(list == null) return;
+		
 		String name = path.substring(path.lastIndexOf("/"), path.length());
 		String _path;
 		
@@ -524,10 +528,11 @@ public class FileManager {
 		
 		if(file.exists() && file.canRead()) {
 			String[] list = file.list();
+			if(list == null) return mDirContent;
+			
 			int len = list.length;
 			/* add files/folder to arraylist depending on hidden status */
 			for (int i = 0; i < len; i++) {
-			    Log.d("####", "-->" + list[i]);
 				if(!mShowHiddenFiles) {
 					if(list[i].toString().charAt(0) != '.')
 						mDirContent.add(list[i]);					
@@ -617,6 +622,8 @@ public class FileManager {
 		
 		} else if (file.isDirectory()) {
 			String[] list = file.list();
+			if(list == null) return;
+			
 			int len = list.length;
 										
 			for(int i = 0; i < len; i++)

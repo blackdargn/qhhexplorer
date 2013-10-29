@@ -741,7 +741,8 @@ public class EventHandler implements OnClickListener {
     			}
     			
     		} else if (file != null && file.isDirectory()) {
-    			if (file.canRead() && file.list().length > 0)
+    		    String[] subs = file.list();
+    			if (file.canRead() && subs != null && subs.length > 0)
     				mViewHolder.icon.setImageResource(R.drawable.folder_full);
     			else
     				mViewHolder.icon.setImageResource(R.drawable.folder);
