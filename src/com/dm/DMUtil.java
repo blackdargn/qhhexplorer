@@ -2,6 +2,7 @@ package com.dm;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.util.Log;
 import android.view.ViewGroup;
 import cn.domob.android.ads.DomobAdEventListener;
@@ -50,8 +51,10 @@ public class DMUtil {
             
             @Override
             public void onDomobAdFailed(DomobAdView view, ErrorCode arg1) {
-                view.requestRefreshAd();
-                view.setRefreshable(true);
+                if(isNetAvaliable(view.getContext())) {
+                    view.requestRefreshAd();
+                    view.setRefreshable(true);
+                }
                 Log.d("##", "Failed!");
             }
             
@@ -62,5 +65,20 @@ public class DMUtil {
         });
         
         return mAdviewFlexibleAdView;
+    }
+    
+    public static boolean isNetAvaliable(Context context)
+    {
+        final ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if(connMgr == null) return false;
+        final android.net.NetworkInfo wifi = connMgr
+                .getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        final android.net.NetworkInfo mobile = connMgr
+                .getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        if ( (wifi == null || !wifi.isAvailable()) && ( mobile == null || !mobile.isAvailable()))
+        {
+            return false;
+        }
+        return true;
     }
 }
