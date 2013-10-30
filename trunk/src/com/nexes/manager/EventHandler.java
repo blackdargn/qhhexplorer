@@ -21,6 +21,8 @@ package com.nexes.manager;
 import java.io.File;
 import java.util.ArrayList;
 
+import org.geometerplus.zlibrary.ui.android.R;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -43,8 +45,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.dm.filemgr.R;
 
 /**
  * This class sits between the Main activity and the FileManager class. 

@@ -20,6 +20,8 @@ package com.nexes.manager;
 
 import java.io.IOException;
 
+import org.geometerplus.zlibrary.ui.android.R;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +31,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.dm.DMActivity;
-import com.dm.filemgr.R;
 
 public class AudioPlayblack extends DMActivity {
 	private String music_path;

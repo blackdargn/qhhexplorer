@@ -22,6 +22,8 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.geometerplus.zlibrary.ui.android.R;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -34,7 +36,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.dm.DMActivity;
-import com.dm.filemgr.R;
 
 public class DirectoryInfo extends DMActivity {
 	private static final int KB = 1024;
