@@ -18,6 +18,8 @@
 
 package com.nexes.manager;
 
+import org.geometerplus.zlibrary.ui.android.R;
+
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -29,7 +31,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dm.DMActivity;
-import com.dm.filemgr.R;
 
 public class WirelessManager extends DMActivity {
 	//index values to access the elements in the TextView array.

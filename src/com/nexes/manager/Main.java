@@ -20,6 +20,8 @@ package com.nexes.manager;
 
 import java.io.File;
 
+import org.geometerplus.zlibrary.ui.android.R;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
@@ -49,7 +51,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dm.DMListActivity;
-import com.dm.filemgr.R;
 
 /**
  * This is the main activity. The activity that is presented to the user

@@ -18,6 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package com.nexes.manager;
 
+import org.geometerplus.zlibrary.ui.android.R;
+
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -30,7 +32,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dm.DMActivity;
-import com.dm.filemgr.R;
 
 public class HelpManager extends DMActivity implements OnClickListener {
 	private static final String[] EMAIL = {"zhaodh2008@gmail.com"};
