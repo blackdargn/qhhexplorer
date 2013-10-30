@@ -79,7 +79,7 @@
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
-						android:text="@string/tx_filenum"/>
+						android:text="@string/tx_dirnum"/>
 					<TextView
 						android:id="@+id/dirs_label"
 						android:layout_width="fill_parent"
@@ -126,7 +126,7 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
-						android:gravity="center"
+						android:gravity="left"
 						android:text="@string/tx_totalsize"/>
 					<TextView
 						android:id="@+id/total_size"
