@@ -91,7 +91,7 @@
     </HorizontalScrollView>
     	<TextView
 	    	android:id="@+id/path_label"
-	    	android:text="path is"
+	    	android:text="@string/tx_path"
 	    	android:textColor="@color/white"
 	    	android:background="@color/black"
 	    	android:maxLines="1"
@@ -129,25 +129,25 @@
     		android:layout_width="wrap_content"
     		android:layout_height="wrap_content"
     		android:layout_weight="1"
-    		android:text="Attach"/>
+    		android:text="@string/tx_attach"/>
     	<Button
     		android:id="@+id/hidden_delete"
     		android:layout_width="wrap_content"
     		android:layout_height="wrap_content"
     		android:layout_weight="1"
-      		android:text="Delete"/>
+      		android:text="@string/tx_delete"/>
     	<Button
     		android:id="@+id/hidden_copy"
     		android:layout_width="wrap_content"
     		android:layout_height="wrap_content"
     		android:layout_weight="1"
-    		android:text="Copy"/>
+    		android:text="@string/tx_copy"/>
     	<Button
     		android:id="@+id/hidden_move"
     		android:layout_width="wrap_content"
     		android:layout_height="wrap_content"
     		android:layout_weight="1"
-    		android:text="Move" />
+    		android:text="@string/tx_move" />
     </LinearLayout>		
 </LinearLayout>
 

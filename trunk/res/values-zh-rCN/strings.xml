@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">文件助手</string>
+    <string name="media_dialog">媒体预览</string>
+    <string name="dir_info">文件夹信息</string>
+    <string name="manager_act">应用管理</string>
+    <string name="tx_play">播放</string>
+    <string name="tx_close">关闭</string>
+    <string name="tx_backall">备份所有</string>
+    <string name="tx_emailme">Email开发者</string>
+    <string name="tx_website">站点</string>
+    <string name="tx_dirnum">文件夹数量: </string>
+    <string name="tx_filenum">文件数量: </string>
+    <string name="tx_lastModify">最后修改日期: </string>
+    <string name="tx_totalsize">总大小:  </string>
+    <string name="tx_back">返回</string>
+    <string name="tx_zipfolder">压缩文件夹</string>
+    <string name="tx_inputpath">指向这个路径 </string>
+    <string name="tx_create">创建</string>
+    <string name="tx_cancel">取消</string>
+    <string name="tx_search">搜索</string>
+    <string name="tx_path">路径是</string>
+    <string name="tx_attach">选取</string>
+    <string name="tx_delete">删除</string>
+    <string name="tx_Rename">命名</string>
+    <string name="tx_copy">拷贝</string>
+    <string name="tx_move">移动</string>
+    <string name="tx_display">显示</string>
+    <string name="tx_textcolor">文本颜色</string>
+    <string name="tx_chgtextcolor">改变设置的文本颜色</string>
+    <string name="tx_showhide">是否显示隐藏的文件或文件夹</string>
+    <string name="tx_chgshowhide">展示隐藏文件和文件夹以.结尾</string>
+    <string name="tx_showimg">图片显示</string>
+    <string name="tx_chgshowimg">以缩略图展示图片文件</string>
+    <string name="tx_showstorage">显示存在栏</string>
+    <string name="tx_chgshowstorage">显示SD卡的存储信息</string>
+    <string name="tx_sort">排序</string>
+    <string name="tx_sorttype"> 排序类型</string>
+    <string name="tx_chgsorttype"> 指定文件或文件夹的排序方式</string>
+   
+    <string name="tip_appback">应用已备份</string>
+    <string name="tip_appbacking">正在备份应用</string>
+    <string name="fmt_appnum">您已经安装了 %1$d 个应用</string>
+    <string name="tx_preview">预览</string>
+    <string name="tx_audiofile">音乐路径: </string>
+    <string name="tx_calculating">正在计算...</string>
+    <string name="tx_folder"> 文件夹 </string>
+    <string name="tx_file"> 文件 </string>
+    <string name="tip_mutleseloff"> 多文件选取取消 </string>
+    <string name="fmt_holdfiles">找到 %1$d 个文件</string>
+    <string name="fmt_deletefiles">您确定删除 %1$d 个文件? 这个操作不可恢复！</string>
+	<string name="op_applist">应用信息</string>
+	<string name="op_appback">应用备份</string>
+	<string name="tip_toolbox">工具栏</string>
+	<string name="tip_searching">正在搜索</string>
+	<string name="tip_searchingtx">搜索当前文件目录...</string>
+	<string name="tip_copying">正在拷贝</string>
+	<string name="tip_copyingtx">拷贝文件中...</string>
+	<string name="tip_unzipping">正在解压缩</string>
+	<string name="tip_unzippingtx">正在解压缩，请稍候...</string>
+	<string name="tip_zipping">正在压缩</string>
+	<string name="tip_zippingtx">正在压缩文件夹...</string>
+	<string name="tip_deleting">正在删除</string>
+	<string name="tip_deletingtx">删除文件中夹...</string>
+	
+	<string name="tip_notfind">无法找到 </string>
+	<string name="fmt_found">已找到 %1$d 个文件</string>
+	<string name="tip_filecopy">文件已成功的拷贝和黏贴</string>
+	<string name="tip_filecopyfail">拷贝黏贴失败</string>
+	<string name="tx_about">文件助手：如果您有任何问题和建议，请邮件到开发者或者访问网站.\n\n谢谢！\n\n</string>
+	<string name="tip_notemail">抱歉，无法启动Email！</string>
+	<string name="tip_notweb">抱歉， 无法打开网站！</string>
+	<string name="fmt_diskinfo">SD卡: 总和 %1$.2f GB \t\t 可用 %2$.2f GB</string>
+	<string name="tip_nopremission">您没权限读这个文件</string>
+	<string name="op_extract">解压缩</string>
+	<string name="op_extracthere">解压到这</string>
+	<string name="op_extracto">解压到</string>
+	<string name="fmt_holdextract">将  %1$s 解压缩</string>
+	<string name="tip_notpdf">抱歉， 无法找到pdf阅读器！</string>
+	<string name="tip_nothtml">抱歉， 无法找到HTML阅读器！</string>
+	
+	<string name="menu_newdir">新文件夹</string>
+	<string name="menu_search">搜索</string>
+	<string name="menu_setting">设置</string>
+	<string name="menu_quit">退出</string>
+	
+	<string name="op_floderop">文件夹操作</string>
+	<string name="op_floderop_del">删除</string>
+	<string name="op_floderop_rename">命名</string>
+	<string name="op_floderop_copy">拷贝</string>
+	<string name="op_floderop_move">剪切</string>
+	<string name="op_floderop_zip">压缩</string>
+	<string name="op_floderop_paste">黏贴到这</string>
+	<string name="op_floderop_extract">解压到这</string>
+	
+	<string name="op_fileop">文件操作</string>
+	<string name="op_fileop_del">删除</string>
+	<string name="op_fileop_rename">命名</string>
+	<string name="op_fileop_copy">拷贝</string>
+	<string name="op_fileop_move">剪切</string>
+	<string name="op_fileop_email">发送EMail</string>
+	
+	<string name="tip_warning">警告</string>
+	<string name="fmt_delwaring"> 您确定删除 %1$s ？ 这个操作无法恢复！</string>
+	<string name="tip_notzipp">您没有权限解压缩到这！ </string> 
+	<string name="fmt_create">文件夹 %1$s  已创建!</string>
+	<string name="tip_notcreate">新文件夹无法创建！!</string>
+	<string name="fmt_rename"> %1$s  命名为  %2$s!</string>
+	<string name="tip_notrename"> 无法虫命名!</string>
+	<string name="tip_backagain">再按一次退出.</string>
+	<string name="tx_searchfile">搜索文件</string>
+	<string name="tx_createDir">创建新文件夹</string>
+	<string name="tx_holding">将 </string>
+	<string name="tx_pathex">路径:  </string>
+	
+	<string name="op_detail">详情</string>
+	<string name="op_launch">启动</string>
+	<string name="tip_appop">应用选项</string>
+	<string name="tip_notlaunch">无法启动！</string>
+	<string name="fmt_mem">有效存储:\t %1$.2f Mb</string>
+	<string name="tip_appNums">应用数量:\t </string>
+	<string name="tip_selcolor">改变文本颜色</string>
+	<string name="tip_sortby">指定排序</string>
+
+</resources>

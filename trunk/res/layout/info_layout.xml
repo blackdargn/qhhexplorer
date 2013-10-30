@@ -79,7 +79,7 @@
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
-						android:text="Number of folders: "/>
+						android:text="@string/tx_filenum"/>
 					<TextView
 						android:id="@+id/dirs_label"
 						android:layout_width="fill_parent"
@@ -95,7 +95,7 @@
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
-						android:text="Number of files: "/>
+						android:text="@string/tx_filenum"/>
 					<TextView
 						android:id="@+id/files_label"
 						android:layout_width="fill_parent"
@@ -111,7 +111,7 @@
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
-						android:text="Last Modified: "/>
+						android:text="@string/tx_lastModify"/>
 					<TextView
 						android:id="@+id/time_stamp"
 						android:layout_width="fill_parent"
@@ -127,7 +127,7 @@
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="center"
-						android:text="Total size: "/>
+						android:text="@string/tx_totalsize"/>
 					<TextView
 						android:id="@+id/total_size"
 						android:layout_width="fill_parent"
@@ -182,11 +182,11 @@
 			android:layout_height="wrap_content"
 			android:paddingLeft="20dip"
 			android:paddingRight="20dip"
-			android:text="Back"/>
+			android:text="@string/tx_back"/>
 		<Button
 			android:id="@+id/zip_button"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Zip folder"/>
+			android:text="@string/tx_zipfolder"/>
 	</LinearLayout>
 </LinearLayout>

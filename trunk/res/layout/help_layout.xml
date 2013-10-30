@@ -49,13 +49,13 @@
 	 		android:layout_height="wrap_content"
 	 		android:layout_gravity="center"
 	 		android:layout_weight="1"
-	 		android:text="Email Developer"/>
+	 		android:text="@string/tx_emailme"/>
 	 	<Button
 	 		android:id="@+id/help_website_bt"
 	 		android:layout_width="wrap_content"
 	 		android:layout_height="wrap_content"
 	 		android:layout_gravity="center"
 	 		android:layout_weight="1"
-	 		android:text="Website"/>	
+	 		android:text="@string/tx_website"/>	
  	</LinearLayout>
  </LinearLayout>

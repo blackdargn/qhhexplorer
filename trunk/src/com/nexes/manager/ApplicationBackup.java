@@ -91,7 +91,7 @@ public class ApplicationBackup extends DMListActivity implements OnClickListener
 				case FINISH_PROGRESS:
 					mDialog.cancel();
 					Toast.makeText(ApplicationBackup.this, 
-								   "Applications have been backed up", 
+								   R.string.tip_appback, 
 								   Toast.LENGTH_SHORT).show();
 					break;
 			}
@@ -120,7 +120,7 @@ public class ApplicationBackup extends DMListActivity implements OnClickListener
 	@Override
 	public void onClick(View view) {
 		mDialog = ProgressDialog.show(ApplicationBackup.this, 
-				  					  "Backing up applications",
+				  					  getString(R.string.tip_appbacking),
 				  					  "", true, false);
 		
 		Thread all = new Thread(new BackgroundWork(mAppList));
@@ -139,9 +139,8 @@ public class ApplicationBackup extends DMListActivity implements OnClickListener
 				mAppList.add(appInfo);
 		}
 		
-		mAppLabel.setText("You have " +mAppList.size() + " downloaded apps");
+		mAppLabel.setText( String.format(getString(R.string.fmt_appnum), mAppList.size()));
 	}
-
 
 	/*
 	 * This private inner class will perform the backup of applications

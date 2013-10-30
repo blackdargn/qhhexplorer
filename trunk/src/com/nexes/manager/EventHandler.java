@@ -303,7 +303,7 @@ public class EventHandler implements OnClickListener {
 				if (mFileMang.getCurrentDir() != "/") {
 					if(multi_select_flag) {
 						mDelegate.killMultiSelect(true);
-						Toast.makeText(mContext, "Multi-select is now off", 
+						Toast.makeText(mContext, R.string.tip_mutleseloff, 
 									   Toast.LENGTH_SHORT).show();
 					}
 					
@@ -317,7 +317,7 @@ public class EventHandler implements OnClickListener {
 			case R.id.home_button:		
 				if(multi_select_flag) {
 					mDelegate.killMultiSelect(true);
-					Toast.makeText(mContext, "Multi-select is now off", 
+					Toast.makeText(mContext, R.string.tip_mutleseloff, 
 								   Toast.LENGTH_SHORT).show();
 				}
 				
@@ -380,8 +380,7 @@ public class EventHandler implements OnClickListener {
     			}
     			
     			mail_int.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
-    			mContext.startActivity(Intent.createChooser(mail_int, 
-    													   "Email using..."));
+    			mContext.startActivity(Intent.createChooser(mail_int, "Email using..."));
     			
     			mDelegate.killMultiSelect(true);
 				break;
@@ -397,8 +396,7 @@ public class EventHandler implements OnClickListener {
 				if(v.getId() == R.id.hidden_move)
 					delete_after_copy = true;
 					
-				mInfoLabel.setText("Holding " + mMultiSelectData.size() + 
-								   " file(s)");
+				mInfoLabel.setText(String.format(mInfoLabel.getContext().getString(R.string.fmt_holdfiles), mMultiSelectData.size()));
 				
 				mDelegate.killMultiSelect(false);
 				break;
@@ -417,18 +415,16 @@ public class EventHandler implements OnClickListener {
 					data[at++] = string;
 				
 				AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-				builder.setMessage("Are you sure you want to delete " +
-								    data.length + " files? This cannot be " +
-								    "undone.");
+				builder.setMessage(String.format(mContext.getString(R.string.fmt_deletefiles), data.length));
 				builder.setCancelable(false);
-				builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+				builder.setPositiveButton(R.string.tx_delete, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						new BackgroundWork(DELETE_TYPE).execute(data);
 						mDelegate.killMultiSelect(true);
 					}
 				});
-				builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+				builder.setNegativeButton(R.string.tx_cancel, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						mDelegate.killMultiSelect(true);
@@ -485,10 +481,13 @@ public class EventHandler implements OnClickListener {
     		case MANAGE_DIALOG:
     			//un-comment WIFI Info here and in the manifest file 
     	    	//to display WIFI info. Also uncomment and change case number below
-    	    	CharSequence[] options = {"Process Info", /*"Wifi Info",*/ "Application backup"};
+    	    	CharSequence[] options = {
+    	    	        mContext.getString(R.string.op_applist), 
+    	    	        /** wifi info*/
+    	    	        mContext.getString(R.string.op_appback)};
     	    	
     	    	builder = new AlertDialog.Builder(mContext);
-    	    	builder.setTitle("Tool Box");
+    	    	builder.setTitle(R.string.tip_toolbox);
     	    	builder.setIcon(R.drawable.toolbox);
     	    	builder.setItems(options, new DialogInterface.OnClickListener() {
     	    		
@@ -817,38 +816,38 @@ public class EventHandler implements OnClickListener {
     		
     		switch(type) {
     			case SEARCH_TYPE:
-    				pr_dialog = ProgressDialog.show(mContext, "Searching", 
-    												"Searching current file system...",
+    				pr_dialog = ProgressDialog.show(mContext, mContext.getString(R.string.tip_searching), 
+    				        mContext.getString(R.string.tip_searchingtx),
     												true, true);
     				break;
     				
     			case COPY_TYPE:
-    				pr_dialog = ProgressDialog.show(mContext, "Copying", 
-    												"Copying file...", 
+    				pr_dialog = ProgressDialog.show(mContext, mContext.getString(R.string.tip_copying), 
+                            mContext.getString(R.string.tip_copyingtx),
     												true, false);
     				break;
     				
     			case UNZIP_TYPE:
-    				pr_dialog = ProgressDialog.show(mContext, "Unzipping", 
-    												"Unpacking zip file please wait...",
+    				pr_dialog = ProgressDialog.show(mContext, mContext.getString(R.string.tip_unzipping), 
+                            mContext.getString(R.string.tip_unzippingtx),
     												true, false);
     				break;
     				
     			case UNZIPTO_TYPE:
-    				pr_dialog = ProgressDialog.show(mContext, "Unzipping", 
-    												"Unpacking zip file please wait...",
+    				pr_dialog = ProgressDialog.show(mContext,  mContext.getString(R.string.tip_unzipping), 
+                            mContext.getString(R.string.tip_unzippingtx),
     												true, false);
     				break;
     			
     			case ZIP_TYPE:
-    				pr_dialog = ProgressDialog.show(mContext, "Zipping", 
-    												"Zipping folder...", 
+    				pr_dialog = ProgressDialog.show(mContext, mContext.getString(R.string.tip_zipping), 
+                            mContext.getString(R.string.tip_zippingtx),
     												true, false);
     				break;
     				
     			case DELETE_TYPE:
-    				pr_dialog = ProgressDialog.show(mContext, "Deleting", 
-    												"Deleting files...", 
+    				pr_dialog = ProgressDialog.show(mContext,  mContext.getString(R.string.tip_deleting), 
+                            mContext.getString(R.string.tip_deletingtx),
     												true, false);
     				break;
     		}
@@ -922,7 +921,7 @@ public class EventHandler implements OnClickListener {
 			switch(type) {
 				case SEARCH_TYPE:				
 					if(len == 0) {
-						Toast.makeText(mContext, "Couldn't find " + file_name, 
+						Toast.makeText(mContext,mContext.getString(R.string.tip_notfind) + file_name, 
 											Toast.LENGTH_SHORT).show();
 					
 					} else {
@@ -934,7 +933,7 @@ public class EventHandler implements OnClickListener {
 						}
 						
 						AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-						builder.setTitle("Found " + len + " file(s)");
+						builder.setTitle(String.format(mContext.getString(R.string.fmt_found), len));
 						builder.setItems(names, new DialogInterface.OnClickListener() {
 							
 							public void onClick(DialogInterface dialog, int position) {
@@ -958,10 +957,10 @@ public class EventHandler implements OnClickListener {
 					}
 					
 					if(copy_rtn == 0)
-						Toast.makeText(mContext, "File successfully copied and pasted", 
+						Toast.makeText(mContext, R.string.tip_filecopy, 
 											Toast.LENGTH_SHORT).show();
 					else
-						Toast.makeText(mContext, "Copy pasted failed", Toast.LENGTH_SHORT).show();
+						Toast.makeText(mContext, R.string.tip_filecopyfail, Toast.LENGTH_SHORT).show();
 					
 					pr_dialog.dismiss();
 					mInfoLabel.setText("");

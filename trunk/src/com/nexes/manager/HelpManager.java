@@ -34,7 +34,7 @@ import android.widget.Toast;
 import com.dm.DMActivity;
 
 public class HelpManager extends DMActivity implements OnClickListener {
-	private static final String[] EMAIL = {"nexesdevelopment@gmail.com"};
+	private static final String[] EMAIL = {"zhaodh2008@gmail.com"};
 	private static final String WEB = "http://nexesdevelopment.webs.com";
 	
 	@Override
@@ -42,13 +42,9 @@ public class HelpManager extends DMActivity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.help_layout);
-		
-		String text = "Open Manager: If you have any questions or "
-						+"comments, please email the developer or visit "
-						+"the Open Manager web page.\n\nThank you\n\n";
-		
+				
 		TextView label = (TextView)findViewById(R.id.help_top_label);
-		label.setText(text);
+		label.setText(R.string.tx_about);
 		
 		Button email = (Button)findViewById(R.id.help_email_bt);
 		Button web = (Button)findViewById(R.id.help_website_bt);
@@ -70,7 +66,7 @@ public class HelpManager extends DMActivity implements OnClickListener {
 					startActivity(Intent.createChooser(i, "Email using..."));
 					
 				} catch(ActivityNotFoundException e) {
-					Toast.makeText(this, "Sorry, could not start the email", Toast.LENGTH_SHORT).show();
+					Toast.makeText(this, R.string.tip_notemail, Toast.LENGTH_SHORT).show();
 				}
 			break;
 			
@@ -81,7 +77,7 @@ public class HelpManager extends DMActivity implements OnClickListener {
 					startActivity(i);
 					
 				} catch(ActivityNotFoundException e) {
-					Toast.makeText(this, "Sorry, could not open the website", Toast.LENGTH_SHORT).show();
+					Toast.makeText(this, R.string.tip_notweb, Toast.LENGTH_SHORT).show();
 				}
 				break;
 		}
