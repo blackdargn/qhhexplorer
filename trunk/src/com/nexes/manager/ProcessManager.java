@@ -21,8 +21,6 @@ package com.nexes.manager;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.geometerplus.zlibrary.ui.android.R;
-
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
 import android.app.ActivityManager.RunningAppProcessInfo;
@@ -43,6 +41,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dm.DMListActivity;
+import com.dm.filemgr.R;
 
 /**
  * 

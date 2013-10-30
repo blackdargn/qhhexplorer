@@ -66,16 +66,17 @@
 		android:layout_height="fill_parent"
 		android:padding="8dip"
 		android:layout_weight="2">
-			<TableLayout
+			<LinearLayout
 				android:orientation="vertical"
 				android:layout_width="fill_parent"
-				android:layout_height="fill_parent"
-				android:stretchColumns="*"
-				android:shrinkColumns="*">
-				<TableRow>
+				android:layout_height="fill_parent">
+				<LinearLayout
+				    android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
 					<TextView
 						android:id="@+id/first_title"
-						android:layout_width="fill_parent"
+						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
@@ -85,13 +86,16 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
-						android:gravity="right"/>
-				</TableRow>
+						android:gravity="left"/>
+				</LinearLayout>
 				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="8dip"/>
-				<TableRow>
+				<LinearLayout
+				    android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
 					<TextView
 						android:id="@+id/second_title"
-						android:layout_width="fill_parent"
+						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
@@ -101,13 +105,16 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
-						android:gravity="right"/>
-				</TableRow>
+						android:gravity="left"/>
+				</LinearLayout>
 				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="8dip"/>
-				<TableRow>
+				<LinearLayout
+				    android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
 					<TextView
 						android:id="@+id/third_title"
-						android:layout_width="fill_parent"
+						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
@@ -117,13 +124,17 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
-						android:gravity="right"/>
-				</TableRow>
-				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="25dip"/>
-				<TableRow>
+						android:gravity="left"
+						android:maxLines="1"/>
+				</LinearLayout>
+				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="8dip"/>			
+				<LinearLayout
+				    android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
 					<TextView
 						android:id="@+id/fourth_title"
-						android:layout_width="fill_parent"
+						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="left"
@@ -133,13 +144,16 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
-						android:gravity="right"/>
-				</TableRow>
+						android:gravity="left"/>
+				</LinearLayout>
 				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="8dip"/>
-				<TableRow>
+				<LinearLayout
+				    android:orientation="horizontal"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
 					<TextView
 						android:id="@+id/fifth_title"
-						android:layout_width="fill_parent"
+						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
 						android:gravity="center"/>
@@ -148,8 +162,8 @@
 						android:layout_width="fill_parent"
 						android:layout_height="wrap_content"
 						android:textColor="@color/white"
-						android:gravity="right"/>
-				</TableRow> 
+						android:gravity="left"/>
+				</LinearLayout>
 			<!--
 				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="8dip"/>
 				<TableRow>
@@ -168,7 +182,7 @@
 						android:gravity="right"/>
 				</TableRow>
 			-->
-			</TableLayout>
+			</LinearLayout>
 	</ScrollView>
 	
 	<LinearLayout

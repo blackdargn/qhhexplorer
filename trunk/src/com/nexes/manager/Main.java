@@ -20,8 +20,6 @@ package com.nexes.manager;
 
 import java.io.File;
 
-import org.geometerplus.zlibrary.ui.android.R;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
@@ -51,6 +49,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dm.DMListActivity;
+import com.dm.filemgr.R;
 
 /**
  * This is the main activity. The activity that is presented to the user
@@ -358,6 +357,7 @@ public final class Main extends DMListActivity {
 									
 								case 1:
 									mDetailLabel.setText(String.format(getString(R.string.fmt_holdextract), item));
+									mDetailLabel.setVisibility(View.VISIBLE);
 									mHoldingZip = true;
 									break;
 							}
@@ -654,6 +654,7 @@ public final class Main extends DMListActivity {
     			
     			mCopiedTarget = mFileMag.getCurrentDir() +"/"+ mSelectedListItem;
     			mDetailLabel.setText(getString(R.string.tx_holding) + mSelectedListItem);
+    			mDetailLabel.setVisibility(View.VISIBLE);
     			return true;
     			
     		
@@ -667,6 +668,7 @@ public final class Main extends DMListActivity {
     				
     				mHandler.copyFile(mCopiedTarget, mFileMag.getCurrentDir() +"/"+ mSelectedListItem);
     				mDetailLabel.setText("");
+    				mDetailLabel.setVisibility(View.GONE);
     			}
     			    			   			
     			mHoldingFile = false;
@@ -695,6 +697,7 @@ public final class Main extends DMListActivity {
     			
     			mHoldingZip = false;
     			mDetailLabel.setText("");
+    			mDetailLabel.setVisibility(View.GONE);
     			mZippedTarget = "";
     			return true;
     	}
