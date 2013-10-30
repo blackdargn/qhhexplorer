@@ -71,11 +71,10 @@ public class Settings extends DMActivity {
 			@Override
 			public void onClick(View view) {
 				AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
-				CharSequence[] options = {"White", "Magenta", "Yellow", "Red", "Cyan",
-									      "Blue", "Green"};
+				String[] options = getResources().getStringArray(R.array.sel_colors);
 				int index = ((color_state & 0x00ffffff) << 2) % options.length;
 				
-				builder.setTitle("Change text color");
+				builder.setTitle(R.string.tip_selcolor);
 				builder.setIcon(R.drawable.color);
 				builder.setSingleChoiceItems(options, index, new DialogInterface.OnClickListener() {
 					@Override
@@ -168,9 +167,9 @@ public class Settings extends DMActivity {
 			@Override
 			public void onClick(View view) {
 				AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
-    			CharSequence[] options = {"None", "Alphabetical", "Type", "Size"};
+    			String[] options =getResources().getStringArray(R.array.sort_type);
     			
-    			builder.setTitle("Sort by...");
+    			builder.setTitle(R.string.tip_sortby);
     			builder.setIcon(R.drawable.filter);
     			builder.setSingleChoiceItems(options, sort_state, new DialogInterface.OnClickListener() {					
 					@Override

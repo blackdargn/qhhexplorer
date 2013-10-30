@@ -50,17 +50,17 @@ public class AudioPlayblack extends DMActivity {
 
 		label = (TextView)findViewById(R.id.music_label);
 		play_button = (Button)findViewById(R.id.media_play_button);
-		play_button.setText("Preview");
+		play_button.setText(R.string.tx_preview);
 		play_button.setOnClickListener(new ButtonHandler());
 		
 		close_button = (Button)findViewById(R.id.media_close_button);
-		close_button.setText("Close");
+		close_button.setText(R.string.tx_close);
 		close_button.setOnClickListener(new ButtonHandler());
 		
 		music_path = getIntent().getExtras().getString("MUSIC PATH");
 		music_name = music_path.substring(music_path.lastIndexOf("/") + 1, music_path.length());
 		
-		label.setText("Audio file: " + music_name);
+		label.setText(getString(R.string.tx_audiofile) + music_name);
 	}
 	
 	private void close() {

@@ -157,7 +157,7 @@ public final class Main extends DMListActivity {
         mStorageLabel = (TextView)findViewById(R.id.storage_label);
         mDetailLabel = (TextView)findViewById(R.id.detail_label);
         mPathLabel = (TextView)findViewById(R.id.path_label);
-        mPathLabel.setText("path: /sdcard");
+        mPathLabel.setText( getString(R.string.tx_pathex) + " /sdcard");
         
         updateStorageLabel();
         mStorageLabel.setVisibility(space);
@@ -229,8 +229,7 @@ public final class Main extends DMListActivity {
 		total = fs.getBlockCount() * (fs.getBlockSize() / kb);
 		aval = fs.getAvailableBlocks() * (fs.getBlockSize() / kb);
 		
-		mStorageLabel.setText(String.format("sdcard: Total %.2f GB " +
-							  "\t\tAvailable %.2f GB", 
+		mStorageLabel.setText(String.format(getString(R.string.fmt_diskinfo), 
 							  (double)total / (kb * kb), (double)aval / (kb * kb)));
 	}
 	
@@ -275,8 +274,7 @@ public final class Main extends DMListActivity {
 		    			mUseBackKey = true;
 		    		
 	    		} else {
-	    			Toast.makeText(this, "Can't read folder due to permissions", 
-	    							Toast.LENGTH_SHORT).show();
+	    			Toast.makeText(this, R.string.tip_nopremission, Toast.LENGTH_SHORT).show();
 	    		}
 	    	}
 	    	
@@ -346,9 +344,9 @@ public final class Main extends DMListActivity {
 		    		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		    		AlertDialog alert;
 		    		mZippedTarget = mFileMag.getCurrentDir() + "/" + item;
-		    		CharSequence[] option = {"Extract here", "Extract to..."};
+		    		CharSequence[] option = {getString(R.string.op_extracthere), getString(R.string.op_extracto)};
 		    		
-		    		builder.setTitle("Extract");
+		    		builder.setTitle(R.string.op_extract);
 		    		builder.setItems(option, new DialogInterface.OnClickListener() {
 		
 						public void onClick(DialogInterface dialog, int which) {
@@ -359,8 +357,7 @@ public final class Main extends DMListActivity {
 									break;
 									
 								case 1:
-									mDetailLabel.setText("Holding " + item + 
-														 " to extract");
+									mDetailLabel.setText(String.format(getString(R.string.fmt_holdextract), item));
 									mHoldingZip = true;
 									break;
 							}
@@ -394,14 +391,12 @@ public final class Main extends DMListActivity {
 	    			} else {
 			    		Intent pdfIntent = new Intent();
 			    		pdfIntent.setAction(android.content.Intent.ACTION_VIEW);
-			    		pdfIntent.setDataAndType(Uri.fromFile(file), 
-			    								 "application/pdf");
+			    		pdfIntent.setDataAndType(Uri.fromFile(file), "application/pdf");
 			    		
 			    		try {
 			    			startActivity(pdfIntent);
 			    		} catch (ActivityNotFoundException e) {
-			    			Toast.makeText(this, "Sorry, couldn't find a pdf viewer", 
-									Toast.LENGTH_SHORT).show();
+			    			Toast.makeText(this, R.string.tip_notpdf, Toast.LENGTH_SHORT).show();
 			    		}
 		    		}
 	    		}
@@ -438,8 +433,7 @@ public final class Main extends DMListActivity {
 		    			try {
 		    				startActivity(htmlIntent);
 		    			} catch(ActivityNotFoundException e) {
-		    				Toast.makeText(this, "Sorry, couldn't find a HTML viewer", 
-		    									Toast.LENGTH_SHORT).show();
+		    				Toast.makeText(this, R.string.tip_nothtml, Toast.LENGTH_SHORT).show();
 		    			}
 	    			}
 	    		}
@@ -531,13 +525,13 @@ public final class Main extends DMListActivity {
     /* ================Menus, options menu and context menu start here=================*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-    	menu.add(0, MENU_MKDIR, 0, "New Directory").setIcon(R.drawable.newfolder);
-    	menu.add(0, MENU_SEARCH, 0, "Search").setIcon(R.drawable.search);
+    	menu.add(0, MENU_MKDIR, 0, getString(R.string.menu_newdir)).setIcon(R.drawable.newfolder);
+    	menu.add(0, MENU_SEARCH, 0, getString(R.string.menu_search)).setIcon(R.drawable.search);
     	
     		/* free space will be implemented at a later time */
 //    	menu.add(0, MENU_SPACE, 0, "Free space").setIcon(R.drawable.space);
-    	menu.add(0, MENU_SETTING, 0, "Settings").setIcon(R.drawable.setting);
-    	menu.add(0, MENU_QUIT, 0, "Quit").setIcon(R.drawable.logout);
+    	menu.add(0, MENU_SETTING, 0,getString(R.string.menu_setting)).setIcon(R.drawable.setting);
+    	menu.add(0, MENU_QUIT, 0, getString(R.string.menu_quit)).setIcon(R.drawable.logout);
     	
     	return true;
     }
@@ -584,24 +578,23 @@ public final class Main extends DMListActivity {
 
     	/* is it a directory and is multi-select turned off */
     	if(mFileMag.isDirectory(mSelectedListItem) && !mHandler.isMultiSelected()) {
-    		menu.setHeaderTitle("Folder operations");
-        	menu.add(0, D_MENU_DELETE, 0, "Delete Folder");
-        	menu.add(0, D_MENU_RENAME, 0, "Rename Folder");
-        	menu.add(0, D_MENU_COPY, 0, "Copy Folder");
-        	menu.add(0, D_MENU_MOVE, 0, "Move(Cut) Folder");
-        	menu.add(0, D_MENU_ZIP, 0, "Zip Folder");
-        	menu.add(0, D_MENU_PASTE, 0, "Paste into folder").setEnabled(mHoldingFile || 
-        																 multi_data);
-        	menu.add(0, D_MENU_UNZIP, 0, "Extract here").setEnabled(mHoldingZip);
+    		menu.setHeaderTitle(R.string.op_floderop);
+        	menu.add(0, D_MENU_DELETE, 0, R.string.op_floderop_del);
+        	menu.add(0, D_MENU_RENAME, 0, R.string.op_floderop_rename);
+        	menu.add(0, D_MENU_COPY, 0, R.string.op_floderop_copy);
+        	menu.add(0, D_MENU_MOVE, 0, R.string.op_floderop_move);
+        	menu.add(0, D_MENU_ZIP, 0, R.string.op_floderop_zip);
+        	menu.add(0, D_MENU_PASTE, 0,R.string.op_floderop_paste).setEnabled(mHoldingFile || multi_data);
+        	menu.add(0, D_MENU_UNZIP, 0,R.string.op_floderop_extract).setEnabled(mHoldingZip);
     		
         /* is it a file and is multi-select turned off */
     	} else if(!mFileMag.isDirectory(mSelectedListItem) && !mHandler.isMultiSelected()) {
-        	menu.setHeaderTitle("File Operations");
-    		menu.add(0, F_MENU_DELETE, 0, "Delete File");
-    		menu.add(0, F_MENU_RENAME, 0, "Rename File");
-    		menu.add(0, F_MENU_COPY, 0, "Copy File");
-    		menu.add(0, F_MENU_MOVE, 0, "Move(Cut) File");
-    		menu.add(0, F_MENU_ATTACH, 0, "Email File");
+        	menu.setHeaderTitle(R.string.op_fileop);
+    		menu.add(0, F_MENU_DELETE, 0, R.string.op_fileop_del);
+    		menu.add(0, F_MENU_RENAME, 0, R.string.op_fileop_rename);
+    		menu.add(0, F_MENU_COPY, 0, R.string.op_fileop_copy);
+    		menu.add(0, F_MENU_MOVE, 0, R.string.op_fileop_move);
+    		menu.add(0, F_MENU_ATTACH, 0, R.string.op_fileop_email);
     	}	
     }
     
@@ -612,18 +605,17 @@ public final class Main extends DMListActivity {
     		case D_MENU_DELETE:
     		case F_MENU_DELETE:
     			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    			builder.setTitle("Warning ");
+    			builder.setTitle(R.string.tip_warning);
     			builder.setIcon(R.drawable.warning);
-    			builder.setMessage("Deleting " + mSelectedListItem +
-    							" cannot be undone. Are you sure you want to delete?");
+    			builder.setMessage(String.format(getString(R.string.fmt_delwaring), mSelectedListItem));
     			builder.setCancelable(false);
     			
-    			builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+    			builder.setNegativeButton(R.string.tx_cancel, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						dialog.dismiss();
 					}
     			});
-    			builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+    			builder.setPositiveButton(R.string.tx_delete, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						mHandler.deleteFile(mFileMag.getCurrentDir() + "/" + mSelectedListItem);
 					}
@@ -661,7 +653,7 @@ public final class Main extends DMListActivity {
     			mHoldingFile = true;
     			
     			mCopiedTarget = mFileMag.getCurrentDir() +"/"+ mSelectedListItem;
-    			mDetailLabel.setText("Holding " + mSelectedListItem);
+    			mDetailLabel.setText(getString(R.string.tx_holding) + mSelectedListItem);
     			return true;
     			
     		
@@ -697,8 +689,7 @@ public final class Main extends DMListActivity {
 	    				mPathLabel.setText(current_dir);
 	    				
     				} else {
-    					Toast.makeText(this, "You do not have permission to unzip " + name, 
-    							Toast.LENGTH_SHORT).show();
+    					Toast.makeText(this, getString(R.string.tip_notzipp) + name, Toast.LENGTH_SHORT).show();
     				}
     			}
     			
@@ -719,7 +710,7 @@ public final class Main extends DMListActivity {
     	switch(id) {
     		case MENU_MKDIR:
     			dialog.setContentView(R.layout.input_layout);
-    			dialog.setTitle("Create New Directory");
+    			dialog.setTitle(R.string.tx_createDir);
     			dialog.setCancelable(false);
     			
     			ImageView icon = (ImageView)dialog.findViewById(R.id.input_icon);
@@ -737,10 +728,10 @@ public final class Main extends DMListActivity {
     					if (input.getText().length() > 1) {
     						if (mFileMag.createDir(mFileMag.getCurrentDir() + "/", input.getText().toString()) == 0)
     							Toast.makeText(Main.this, 
-    										   "Folder " + input.getText().toString() + " created", 
+    										   String.format(getString(R.string.fmt_create), input.getText().toString()), 
     										   Toast.LENGTH_LONG).show();
     						else
-    							Toast.makeText(Main.this, "New folder was not created", Toast.LENGTH_SHORT).show();
+    							Toast.makeText(Main.this, R.string.tip_notcreate, Toast.LENGTH_SHORT).show();
     					}
     					
     					dialog.dismiss();
@@ -755,7 +746,7 @@ public final class Main extends DMListActivity {
     		case D_MENU_RENAME:
     		case F_MENU_RENAME:
     			dialog.setContentView(R.layout.input_layout);
-    			dialog.setTitle("Rename " + mSelectedListItem);
+    			dialog.setTitle(getString(R.string.tx_Rename) + mSelectedListItem);
     			dialog.setCancelable(false);
     			
     			ImageView rename_icon = (ImageView)dialog.findViewById(R.id.input_icon);
@@ -767,7 +758,7 @@ public final class Main extends DMListActivity {
     			
     			Button rename_cancel = (Button)dialog.findViewById(R.id.input_cancel_b);
     			Button rename_create = (Button)dialog.findViewById(R.id.input_create_b);
-    			rename_create.setText("Rename");
+    			rename_create.setText(R.string.tx_Rename);
     			
     			rename_create.setOnClickListener(new OnClickListener() {
     				public void onClick (View v) {
@@ -775,10 +766,11 @@ public final class Main extends DMListActivity {
     						dialog.dismiss();
     					
     					if(mFileMag.renameTarget(mFileMag.getCurrentDir() +"/"+ mSelectedListItem, rename_input.getText().toString()) == 0) {
-    						Toast.makeText(Main.this, mSelectedListItem + " was renamed to " +rename_input.getText().toString(),
+    						Toast.makeText(Main.this, 
+    						        String.format(getString(R.string.fmt_rename), mSelectedListItem ,rename_input.getText().toString()),
     								Toast.LENGTH_LONG).show();
     					}else
-    						Toast.makeText(Main.this, mSelectedListItem + " was not renamed", Toast.LENGTH_LONG).show();
+    						Toast.makeText(Main.this, mSelectedListItem + getString(R.string.tip_notrename), Toast.LENGTH_LONG).show();
     						
     					dialog.dismiss();
     					String temp = mFileMag.getCurrentDir();
@@ -793,19 +785,19 @@ public final class Main extends DMListActivity {
     		case SEARCH_B:
     		case MENU_SEARCH:
     			dialog.setContentView(R.layout.input_layout);
-    			dialog.setTitle("Search");
+    			dialog.setTitle(R.string.tx_search);
     			dialog.setCancelable(false);
     			
     			ImageView searchIcon = (ImageView)dialog.findViewById(R.id.input_icon);
     			searchIcon.setImageResource(R.drawable.search);
     			
     			TextView search_label = (TextView)dialog.findViewById(R.id.input_label);
-    			search_label.setText("Search for a file");
+    			search_label.setText(R.string.tx_searchfile);
     			final EditText search_input = (EditText)dialog.findViewById(R.id.input_inputText);
     			
     			Button search_button = (Button)dialog.findViewById(R.id.input_create_b);
     			Button cancel_button = (Button)dialog.findViewById(R.id.input_cancel_b);
-    			search_button.setText("Search");
+    			search_button.setText(R.string.tx_search);
     			
     			search_button.setOnClickListener(new OnClickListener() {
     				public void onClick(View v) {
@@ -844,7 +836,7 @@ public final class Main extends DMListActivity {
     	} else if(keycode == KeyEvent.KEYCODE_BACK && mUseBackKey && !current.equals("/")) {
     		if(mHandler.isMultiSelected()) {
     			mTable.killMultiSelect(true);
-    			Toast.makeText(Main.this, "Multi-select is now off", Toast.LENGTH_SHORT).show();
+    			Toast.makeText(Main.this, R.string.tip_mutleseloff, Toast.LENGTH_SHORT).show();
     		
     		} else {
     			//stop updating thumbnail icons if its running
@@ -855,11 +847,11 @@ public final class Main extends DMListActivity {
     		return true;
     		
     	} else if(keycode == KeyEvent.KEYCODE_BACK && mUseBackKey && current.equals("/")) {
-    		Toast.makeText(Main.this, "Press back again to quit.", Toast.LENGTH_SHORT).show();
+    		Toast.makeText(Main.this, R.string.tip_backagain, Toast.LENGTH_SHORT).show();
     		
     		if(mHandler.isMultiSelected()) {
     			mTable.killMultiSelect(true);
-    			Toast.makeText(Main.this, "Multi-select is now off", Toast.LENGTH_SHORT).show();
+    			Toast.makeText(Main.this, R.string.tip_mutleseloff, Toast.LENGTH_SHORT).show();
     		}
     		
     		mUseBackKey = false;

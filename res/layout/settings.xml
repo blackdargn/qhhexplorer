@@ -33,7 +33,7 @@
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
 			android:textColor="@color/offWhite"
-			android:text="Display"
+			android:text="@string/tx_display"
 			android:textStyle="bold"
 			android:background="@color/darkGray" />
 		<View
@@ -53,7 +53,7 @@
 					android:textSize="18sp"
 					android:textColor="@color/white"
 					android:textStyle="bold"
-					android:text="Text color" />
+					android:text="@string/tx_textcolor" />
 				<TextView
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
 					android:paddingTop="3dip"
 					android:paddingLeft="8dip"
 					android:textColor="@color/offWhite"
-					android:text="Change the preferred text color" />
+					android:text="@string/tx_chgtextcolor" />
 			</LinearLayout>
 			<ImageButton
 				android:id="@+id/setting_text_color_button"
@@ -89,7 +89,7 @@
 					android:textSize="18sp"
 					android:textColor="@color/white"
 					android:textStyle="bold"
-					android:text="Show hidden files/folders" />
+					android:text="@string/tx_showhide" />
 				<TextView
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
 					android:paddingTop="3dip"
 					android:paddingLeft="8dip"
 					android:textColor="@color/offWhite"
-					android:text="Display files and folders that begin with a (period)" />
+					android:text="@string/tx_chgshowhide" />
 			</LinearLayout>
 			<CheckBox
 				android:id="@+id/setting_hidden_box"
@@ -124,7 +124,7 @@
 					android:textSize="18sp"
 					android:textColor="@color/white"
 					android:textStyle="bold"
-					android:text="Show Image Preview" />
+					android:text="@string/tx_showimg" />
 				<TextView
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
 					android:paddingTop="3dip"
 					android:paddingLeft="8dip"
 					android:textColor="@color/offWhite"
-					android:text="Display a thumbnail for image files" />
+					android:text="@string/tx_chgshowimg" />
 			</LinearLayout>
 			<CheckBox
 				android:id="@+id/setting_thumbnail_box"
@@ -159,7 +159,7 @@
 					android:textSize="18sp"
 					android:textColor="@color/white"
 					android:textStyle="bold"
-					android:text="Show Storage Banner" />
+					android:text="@string/tx_showstorage" />
 				<TextView
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
 					android:paddingTop="3dip"
 					android:paddingLeft="8dip"
 					android:textColor="@color/offWhite"
-					android:text="Display sdcard storage information" />
+					android:text="@string/tx_chgshowstorage" />
 			</LinearLayout>
 			<CheckBox
 				android:id="@+id/setting_storage_box"
@@ -187,7 +187,7 @@
 			android:layout_height="wrap_content"
 			android:textColor="@color/offWhite"
 			android:textStyle="bold"
-			android:text="Sorting" 
+			android:text="@string/tx_sort" 
 			android:background="@color/darkGray" />	
 		<View
 			android:layout_width="fill_parent"
@@ -206,7 +206,7 @@
 					android:textSize="18sp"
 					android:textColor="@color/white"
 					android:textStyle="bold"
-					android:text="Sorting type" />
+					android:text="@string/tx_sorttype" />
 				<TextView
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
@@ -214,7 +214,7 @@
 					android:paddingTop="3dip"
 					android:paddingLeft="8dip"
 					android:textColor="@color/offWhite"
-					android:text="Choose how to sort files and folders" />
+					android:text="@string/tx_chgsorttype" />
 			</LinearLayout>
 			<ImageButton
 				android:id="@+id/settings_sort_button"

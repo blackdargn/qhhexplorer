@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <string-array name="sel_colors">
+        <item>白</item>
+        <item>品红</item>
+        <item>黄</item>
+        <item>红</item>
+        <item>青</item>
+        <item>蓝</item>
+        <item>绿</item>
+    </string-array>
+    <string-array name="sort_type">
+        <item>无</item>
+        <item>按英文字母顺序</item>
+        <item>类型</item>
+        <item>大小</item>
+    </string-array>
+</resources>
