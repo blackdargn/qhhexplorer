@@ -28,8 +28,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.geometerplus.zlibrary.ui.android.R;
-
 import android.app.ProgressDialog;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -49,6 +47,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dm.DMListActivity;
+import com.dm.filemgr.R;
 
 /**
  * This class is used to display an activity to the user so they can

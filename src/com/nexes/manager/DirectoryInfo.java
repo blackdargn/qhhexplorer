@@ -19,9 +19,8 @@
 package com.nexes.manager;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import org.geometerplus.zlibrary.ui.android.R;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -35,6 +34,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.dm.DMActivity;
+import com.dm.filemgr.R;
 
 public class DirectoryInfo extends DMActivity {
 	private static final int KB = 1024;
@@ -43,6 +43,7 @@ public class DirectoryInfo extends DMActivity {
 	private String mPathName;
 	private TextView mNameLabel, mPathLabel, mDirLabel,
 					 mFileLabel, mTimeLabel, mTotalLabel;
+	private SimpleDateFormat timeFormter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -150,10 +151,10 @@ public class DirectoryInfo extends DMActivity {
 			mDirLabel.setText(mDirCount + getString(R.string.tx_folder));
 			mFileLabel.setText(mFileCount + getString(R.string.tx_file));
 			mTotalLabel.setText(mDisplaySize);
-			mTimeLabel.setText(new Date(dir.lastModified()) + " ");
+			mTimeLabel.setText(timeFormter.format(new Date(dir.lastModified())));
 			
 			dialog.cancel();
-		}	
+		}
 	}
 	
 	private class ButtonHandler implements OnClickListener {

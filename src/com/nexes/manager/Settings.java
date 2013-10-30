@@ -18,8 +18,6 @@
 
 package com.nexes.manager;
 
-import org.geometerplus.zlibrary.ui.android.R;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,6 +30,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageButton;
 
 import com.dm.DMActivity;
+import com.dm.filemgr.R;
 
 public class Settings extends DMActivity {
 	private boolean mHiddenChanged = false;

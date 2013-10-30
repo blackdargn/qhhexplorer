@@ -21,8 +21,6 @@ package com.nexes.manager;
 import java.io.File;
 import java.util.ArrayList;
 
-import org.geometerplus.zlibrary.ui.android.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -45,6 +43,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.dm.filemgr.R;
 
 /**
  * This class sits between the Main activity and the FileManager class. 
@@ -397,7 +397,7 @@ public class EventHandler implements OnClickListener {
 					delete_after_copy = true;
 					
 				mInfoLabel.setText(String.format(mInfoLabel.getContext().getString(R.string.fmt_holdfiles), mMultiSelectData.size()));
-				
+				mInfoLabel.setVisibility(View.VISIBLE);
 				mDelegate.killMultiSelect(false);
 				break;
 				
@@ -964,6 +964,7 @@ public class EventHandler implements OnClickListener {
 					
 					pr_dialog.dismiss();
 					mInfoLabel.setText("");
+					mInfoLabel.setVisibility(View.GONE);
 					break;
 					
 				case UNZIP_TYPE:
@@ -990,6 +991,7 @@ public class EventHandler implements OnClickListener {
 					updateDirectory(mFileMang.getNextDir(mFileMang.getCurrentDir(), true));
 					pr_dialog.dismiss();
 					mInfoLabel.setText("");
+					mInfoLabel.setVisibility(View.GONE);
 					break;
 			}
 		}
