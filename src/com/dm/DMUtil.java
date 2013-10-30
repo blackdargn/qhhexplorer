@@ -10,11 +10,9 @@ import cn.domob.android.ads.DomobAdView;
 import cn.domob.android.ads.DomobAdManager.ErrorCode;
 
 public class DMUtil {
-    // attention this 56OJzVlYuNOpRvB1hD 56OJzVlYuNUYJwhJ7N
+    // attention this
     public static final String PUBLISHER_ID = "56OJzVlYuNOpRvB1hD";
-    // 16TLm7ZaAp0EcNU-fFg-XTCk 16TLm7ZaApAzkY2Jwfrh3B2k
     public static final String FlexibleInlinePPID1 = "16TLm7ZaAp0EcNU-fFg-XTCk";
-    // 16TLm7ZaAp0EcNU-fAuDq7rz 16TLm7ZaApAzkNUH-tQGBpZz
     public static final String FlexibleInlinePPID2 = "16TLm7ZaAp0EcNU-fAuDq7rz";
     
     public static DomobAdView bindView(final Activity activity, ViewGroup container, String placeId) {
