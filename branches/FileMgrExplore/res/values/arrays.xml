@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <string-array name="sel_colors">
+        <item>White</item>
+        <item>Magenta</item>
+        <item>Yellow</item>
+        <item>Red</item>
+        <item>Cyan</item>
+        <item>Blue</item>
+        <item>Green</item>
+    </string-array>
+    <string-array name="sort_type">
+        <item>None</item>
+        <item>Alphabetical</item>
+        <item>Type</item>
+        <item>Size</item>
+    </string-array>
+</resources>

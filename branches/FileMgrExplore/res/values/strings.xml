@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Open Manager</string>
+    <string name="media_dialog">Media preview</string>
+    <string name="dir_info">Folder Information</string>
+    <string name="manager_act">Phone Management</string>
+    <string name="tx_play">Play</string>
+    <string name="tx_close">Close</string>
+    <string name="tx_backall">Backup all</string>
+    <string name="tx_emailme">Email Developer</string>
+    <string name="tx_website">Website</string>
+    <string name="tx_dirnum">Number of folders: </string>
+    <string name="tx_filenum">Number of files: </string>
+    <string name="tx_lastModify">Last Modified: </string>
+    <string name="tx_totalsize">Total size:  </string>
+    <string name="tx_back">Back</string>
+    <string name="tx_zipfolder">Zip folder</string>
+    <string name="tx_inputpath">path will go here </string>
+    <string name="tx_create">Create</string>
+    <string name="tx_cancel">Cancel</string>
+    <string name="tx_search">Search</string>
+    <string name="tx_path">path is</string>
+    <string name="tx_attach">Attach</string>
+    <string name="tx_delete">Delete</string>
+    <string name="tx_Rename">Rename</string>
+    <string name="tx_copy">Copy</string>
+    <string name="tx_move">Move</string>
+    <string name="tx_display">Display</string>
+    <string name="tx_textcolor">Text color</string>
+    <string name="tx_chgtextcolor">Change the preferred text color</string>
+    <string name="tx_showhide">Show hidden files/folders</string>
+    <string name="tx_chgshowhide">Display files and folders that begin with a (period)</string>
+    <string name="tx_showimg">Show Image Preview</string>
+    <string name="tx_chgshowimg">Display a thumbnail for image files</string>
+    <string name="tx_showstorage">Show Storage Banner</string>
+    <string name="tx_chgshowstorage">Display sdcard storage information</string>
+    <string name="tx_sort">Sorting</string>
+    <string name="tx_sorttype"> Sorting type</string>
+    <string name="tx_chgsorttype"> Choose how to sort files and folders</string>
+   
+    <string name="tip_appback">Applications have been backed up</string>
+    <string name="tip_appbacking">Backing up applications</string>
+    <string name="fmt_appnum">You have %1$d downloaded apps</string>
+    <string name="tx_preview">Preview</string>
+    <string name="tx_audiofile">Audio file: </string>
+    <string name="tx_calculating">Calculating information...</string>
+    <string name="tx_folder"> folders </string>
+    <string name="tx_file"> files </string>
+    <string name="tip_mutleseloff"> Multi-select is now off </string>
+    <string name="fmt_holdfiles">Holding %1$d file(s)</string>
+    <string name="fmt_deletefiles">Are you sure you want to delete %1$d files? This cannot be undone.</string>
+	<string name="op_applist">Process Info</string>
+	<string name="op_appback">Application backup</string>
+	<string name="tip_toolbox">Tool Box</string>
+	<string name="tip_searching">Searching</string>
+	<string name="tip_searchingtx">Searching current file system...</string>
+	<string name="tip_copying">Copying</string>
+	<string name="tip_copyingtx">Copying file...</string>
+	<string name="tip_unzipping">Unzipping</string>
+	<string name="tip_unzippingtx">Unpacking zip file please wait...</string>
+	<string name="tip_zipping">Zipping</string>
+	<string name="tip_zippingtx">Zipping folder...</string>
+	<string name="tip_deleting">Deleting</string>
+	<string name="tip_deletingtx">Deleting files...</string>
+	
+	<string name="tip_notfind">Couldn\'t find </string>
+	<string name="fmt_found">Found %1$d file(s)</string>
+	<string name="tip_filecopy">File successfully copied and pasted</string>
+	<string name="tip_filecopyfail">Copy pasted failed</string>
+	<string name="tx_about">Open Manager: If you have any questions or comments, please email the developer or visit the Open Manager web page.\n\nThank you\n\n</string>
+	<string name="tip_notemail">Sorry, could not start the email</string>
+	<string name="tip_notweb">Sorry, could not open the website</string>
+	<string name="fmt_diskinfo">sdcard: Total %1$.2f GB \t\tAvailable %2$.2f GB</string>
+	<string name="tip_nopremission">Can\'t read folder due to permissions</string>
+	<string name="op_extract">Extract</string>
+	<string name="op_extracthere">Extract here</string>
+	<string name="op_extracto">Extract to...</string>
+	<string name="fmt_holdextract">Holding  %1$s to extract</string>
+	<string name="tip_notpdf">Sorry, couldn\'t find a pdf viewer</string>
+	<string name="tip_nothtml">Sorry, couldn\'t find a HTML viewer</string>
+	
+	<string name="menu_newdir">New Directory</string>
+	<string name="menu_search">Search</string>
+	<string name="menu_setting">Settings</string>
+	<string name="menu_quit">Quit</string>
+	
+	<string name="op_floderop">Folder operations</string>
+	<string name="op_floderop_del">Delete Folder</string>
+	<string name="op_floderop_rename">Rename Folder</string>
+	<string name="op_floderop_copy">Copy Folder</string>
+	<string name="op_floderop_move">Move(Cut) Folder</string>
+	<string name="op_floderop_zip">Zip Folder</string>
+	<string name="op_floderop_paste">Paste into folder</string>
+	<string name="op_floderop_extract">Extract here</string>
+	
+	<string name="op_fileop">File Operations</string>
+	<string name="op_fileop_del">Delete File</string>
+	<string name="op_fileop_rename">Rename File</string>
+	<string name="op_fileop_copy">Copy File</string>
+	<string name="op_fileop_move">Move(Cut) File</string>
+	<string name="op_fileop_email">Email File</string>
+	
+	<string name="tip_warning">Warning</string>
+	<string name="fmt_delwaring">Deleting %1$s cannot be undone. Are you sure you want to delete?</string>
+	<string name="tip_notzipp">You do not have permission to unzip </string> 
+	<string name="fmt_create">Folder %1$s  created!</string>
+	<string name="tip_notcreate">New folder was not created!</string>
+	<string name="fmt_rename"> %1$s  was renamed to %2$s!</string>
+	<string name="tip_notrename"> was not renamed!</string>
+	<string name="tip_backagain">Press back again to quit.</string>
+	<string name="tx_searchfile">Search for a file</string>
+	<string name="tx_createDir">Create New Directory</string>
+	<string name="tx_holding">Holding </string>
+	<string name="tx_pathex">path:  </string>
+	
+	<string name="op_detail">Details</string>
+	<string name="op_launch">Launch</string>
+	<string name="tip_appop">Process options</string>
+	<string name="tip_notlaunch">Could not launch</string>
+	<string name="fmt_mem">Available memory:\t %1$.2f Mb</string>
+	<string name="tip_appNums">Number of processes:\t </string>
+	<string name="tip_selcolor">Change text color</string>
+	<string name="tip_sortby">Sort by...</string>
+
+</resources>
