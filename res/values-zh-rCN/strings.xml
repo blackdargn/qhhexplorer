@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">文件助手</string>
+    <string name="app_name">文件管理</string>
     <string name="media_dialog">媒体预览</string>
     <string name="dir_info">文件夹信息</string>
     <string name="manager_act">应用管理</string>
