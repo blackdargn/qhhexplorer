@@ -3,13 +3,10 @@ package com.dm;
 import org.geometerplus.zlibrary.ui.android.R;
 
 import android.app.ListActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import cn.domob.android.ads.DomobAdView;
 
@@ -18,11 +15,6 @@ public class DMListActivity extends ListActivity {
     private DomobAdView adView1;
     private DomobAdView adView2;
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);   
-       requestWindowFeature(Window.FEATURE_NO_TITLE);
-       getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN , WindowManager.LayoutParams. FLAG_FULLSCREEN);
-    }
     
     @Override
     protected void onResume() {
