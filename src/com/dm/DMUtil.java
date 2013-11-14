@@ -17,6 +17,7 @@ public class DMUtil {
     public static final String PUBLISHER_ID = "56OJzVlYuNUYJwhJ7N";
     public static final String FlexibleInlinePPID1 = "16TLm7ZaApAzkY2Jwfrh3B2k";
     public static final String FlexibleInlinePPID2 = "16TLm7ZaApAzkNUH-tQGBpZz";
+    public static boolean BUFFED = true;
     
     public static DomobAdView bindView(final Activity activity, ViewGroup container, String placeId) {
         DomobAdView mAdviewFlexibleAdView = createAdView(activity, placeId);
