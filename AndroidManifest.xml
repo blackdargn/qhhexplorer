@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dm.filemgr"
-    android:versionCode="25"
-    android:versionName="3.5" >
+    android:versionCode="26"
+    android:versionName="3.6" >
+
 
     <uses-sdk
         android:minSdkVersion="5" />
