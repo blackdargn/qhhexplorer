@@ -9,15 +9,21 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.ViewGroup;
 import cn.domob.android.ads.DomobAdEventListener;
-import cn.domob.android.ads.DomobAdView;
 import cn.domob.android.ads.DomobAdManager.ErrorCode;
+import cn.domob.android.ads.DomobAdView;
 
 public class DMUtil {
     // attention this
     public static final String PUBLISHER_ID = "56OJzVlYuNOpRvB1hD";
     public static final String FlexibleInlinePPID1 = "16TLm7ZaAp0EcNU-fFg-XTCk";
     public static final String FlexibleInlinePPID2 = "16TLm7ZaAp0EcNU-fAuDq7rz";
-    public static boolean BUFFED = true;
+    public static final int BUFFED = 3;
+    public static long count = 0;
+    
+    public static boolean isBuffed() {
+        count++;
+        return count%BUFFED == 0;
+    }
     
     public static DomobAdView bindView(final Activity activity, ViewGroup container, String placeId) {
         DomobAdView mAdviewFlexibleAdView = createAdView(activity, placeId);
