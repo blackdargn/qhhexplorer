@@ -17,12 +17,12 @@ public class DMUtil {
     public static final String PUBLISHER_ID = "56OJzVlYuNUYJwhJ7N";
     public static final String FlexibleInlinePPID1 = "16TLm7ZaApAzkY2Jwfrh3B2k";
     public static final String FlexibleInlinePPID2 = "16TLm7ZaApAzkNUH-tQGBpZz";
-    public static final int BUFFED = 2;
+    public static final int BUFFED = 10;
     public static long count = 0;
     
     public static boolean isBuffed() {
         count++;
-        return count%BUFFED == 0;
+        return count%BUFFED != 0;
     }
     
     public static DomobAdView bindView(final Activity activity, ViewGroup container, String placeId) {
