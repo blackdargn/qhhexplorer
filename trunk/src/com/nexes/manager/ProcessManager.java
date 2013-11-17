@@ -78,6 +78,7 @@ public class ProcessManager extends DMListActivity {
 	
 	@Override
 	protected void onListItemClick(ListView parent, View view, int position, long id) {
+	    /**
 		AlertDialog dialog;
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		CharSequence[] options = {getString(R.string.op_detail), getString(R.string.op_launch)};
@@ -116,7 +117,7 @@ public class ProcessManager extends DMListActivity {
 		});
 		
 		dialog = builder.create();
-		dialog.show();
+		dialog.show();*/
 	}
 	
 	/**
