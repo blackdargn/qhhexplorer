@@ -17,7 +17,7 @@ public class DMUtil {
     public static final String PUBLISHER_ID = "56OJzVlYuNUYJwhJ7N";
     public static final String FlexibleInlinePPID1 = "16TLm7ZaApAzkY2Jwfrh3B2k";
     public static final String FlexibleInlinePPID2 = "16TLm7ZaApAzkNUH-tQGBpZz";
-    public static final int BUFFED = 100;
+    public static final int BUFFED = 8;
     public static long count = 0;
     
     public static boolean isBuffed() {
