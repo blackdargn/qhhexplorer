@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.geometerplus.zlibrary.ui.android"
-    android:versionCode="49"
-    android:versionName="5.9" >
+    android:versionCode="55"
+    android:versionName="6.5" >
 
     <uses-sdk
         android:minSdkVersion="5" />
