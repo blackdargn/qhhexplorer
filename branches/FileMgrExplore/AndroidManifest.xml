@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dm.filemgr"
-    android:versionCode="67"
-    android:versionName="7.7" >
+    android:versionCode="85"
+    android:versionName="9.5" >
 
     <uses-sdk
         android:minSdkVersion="5" />
